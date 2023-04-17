@@ -6,12 +6,12 @@ import requests # pip install requests
 data = read_csv("CSV Files/Decathlon-product-reviews.csv") # Path to your CSV File
 
 # converting column data to list
-Images = data['Img'].tolist() # change the string within [] to the collumn name containing the image URL'S
+images = data['Img'].tolist() # change the string within [] to the collumn name containing the image URL'S
 
 # -------------------- Methods --------------------
 # Method to download all images from the links in the list
 def imageDownloader():
-    for imageURL in Images:
+    for imageURL in images:
         response = requests.get(imageURL).content
         filename = imageURL.split('/')[-1]
         with open('Images/' + filename, 'wb') as handler:
