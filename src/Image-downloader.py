@@ -3,10 +3,10 @@ import requests # pip install requests
 
 # -------------------- Setup --------------------
 # Reading CSV file
-data = read_csv("CSV Files/Decathlon-product-reviews.csv")
+data = read_csv("CSV Files/Decathlon-product-reviews.csv") # Path to your CSV File
 
 # converting column data to list
-Images = data['Img'].tolist()
+Images = data['Img'].tolist() # change the string within [] to the collumn name containing the image URL'S
 
 # -------------------- Methods --------------------
 # Method to download all images from the links in the list
