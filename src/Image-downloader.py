@@ -15,6 +15,7 @@ def imageDownloader():
         response = requests.get(imageURL).content
         filename = imageURL.split('/')[-1]
         with open('Images/' + filename, 'wb') as handler:
+            print('Downloading: ' + filename)
             handler.write(response)
 
 # -------------------- Run --------------------
